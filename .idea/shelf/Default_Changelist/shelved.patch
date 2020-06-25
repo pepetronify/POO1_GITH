@@ -1,0 +1,258 @@
+Index: POO_1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- POO_1.iml	(date 1592994706851)
++++ POO_1.iml	(date 1592994706851)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(date 1592994706910)
++++ .idea/misc.xml	(date 1592994706910)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="true" project-jdk-name="openjdk-14" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1592994706945)
++++ .idea/modules.xml	(date 1592994706945)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/POO_1.iml" filepath="$PROJECT_DIR$/POO_1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/.gitignore	(date 1592994716712)
++++ .idea/.gitignore	(date 1592994716712)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: src/poo_pack/Coche.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/poo_pack/Coche.java	(date 1593020024720)
++++ src/poo_pack/Coche.java	(date 1593020024720)
+@@ -0,0 +1,109 @@
++package poo_pack;
++
++import java.security.KeyStore;
++
++public class  Coche {
++
++    private int ruedas;
++    private int largo;
++    private int ancho;
++    private int motor;
++    private int peso_plataforma;
++
++    private String  color;
++    private int peso_total;
++    private boolean asisntos_cuero, climatizador;
++
++
++    /* falta poner valores. Esto con un metodo constructor */
++    public Coche(){
++        ruedas = 4;
++        largo = 2000;
++        ancho = 300;
++        motor = 1600;
++        peso_plataforma = 500;
++    }
++
++    /* A continuacion 5 metodos getter */
++
++    public int getRuedas() {
++        return ruedas;
++    }
++
++    public String getLargo() {
++        return "El largo del coche es " + largo;
++    }
++
++    public String getColor() {
++        return "El color del coche con metodo propuesto es: " + color;
++    }
++
++    public int getAncho() {
++        return ancho;
++    }
++
++    public int getMotor() {
++        return motor;
++    }
++
++    public int getPeso_plataforma() {
++        return peso_plataforma;
++    }
++
++    public boolean isAsisntos_cuero() {
++        return asisntos_cuero;
++    }
++
++    public void setClimatizador(boolean climatizador) {
++        this.climatizador = climatizador;
++    }
++
++    // los 2 setters de abajo hacen casi lo mismo. Poner un color
++    // la 1era. acepta paramentros y la 2da. da un color estatico
++    public void setColor(String color_coche) { // esto es un setter propuesto por inteliJ
++        if (color_coche == "") {
++            this.color = "sin color OR azul por default";
++        }
++        else{
++            this.color = color_coche;
++        }
++    }
++
++     //public void establece_color(String verde_manubrio){ // tambien es un SETTER a manubrio
++     public void establece_color(){ // tambien es un SETTER a manubrio
++        color = "azul estatico";
++    }
++
++    public void setRuedas(int ruedas) {
++        this.ruedas = ruedas;
++    }
++
++    public void setAncho(int ancho_cms) {
++        this.ancho = ancho_cms;
++    }
++
++    public void setMotor(int motor) {
++        this.motor = motor;
++    }
++
++    public void setPeso_plataforma(int peso_plataforma) {
++        this.peso_plataforma = peso_plataforma;
++    }
++
++    public void setLargo(int largo_cm) {
++        this.largo = largo_cm;
++    }
++
++    public void setAsisntos_cuero(String is_asisntos_cuero) {
++        this.asisntos_cuero = false;
++        if (is_asisntos_cuero == "Y" || is_asisntos_cuero == "Yes"){
++            this.asisntos_cuero = true;
++        }
++    }
++
++    public boolean isClimatizador() {
++        return climatizador;
++    }
++
++
++}
+Index: src/poo_pack/Uso_Coche.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/poo_pack/Uso_Coche.java	(date 1593020256230)
++++ src/poo_pack/Uso_Coche.java	(date 1593020256230)
+@@ -0,0 +1,55 @@
++package poo_pack;
++
++public class Uso_Coche {
++    public static void main(String[] args) {
++        /*Esto se llama Instanciar una clase
++        El nuevo objeto Renault es una instancia de la clase coche*/
++        Coche Renault = new Coche();
++
++        /*
++         * Aqui yo ppodria hacer
++         *  -- "Renault.ruedas = 3;" -- y sin problema, el codigo funciona e imprimiria "3"
++         * Esto seria una violacion de datos
++         * PAra evitar estos "sabotakes""
++         * Se usa la ENCAPSULACION
++         * ejemplo: Equipo musica modular. El netx song solo debe poderse hacer desde el CD module y no desde el radio module
++         * Se evita con un "modificado de aceso" editando la clase Coche usando la palabra "private" en la declaracion de la variable
++         *
++         * entonces la instruccion siguiente "DEJA" de funcionar. (antes sin pivcate funcionaba)
++         * System.out.println("Este coche tiene " + Renault.ruedas + " ruedas");
++         *
++         * Para poder ver las ruedas, necesito "metodos"
++         *
++         * para modificar las propiedades de un objeto se usan los metodos: SETTERS y GETTERS
++         * */
++        System.out.println("El Renault tiene " + Renault.getRuedas());
++        System.out.println(Renault.getLargo());
++
++        Coche micoche = new Coche();
++        micoche.establece_color();
++        System.out.println(micoche.getColor());
++
++        micoche.setColor("verde propuesto");
++        System.out.println(micoche.getColor());
++
++        micoche.setColor("rojo propuesto");
++        System.out.println(micoche.getColor());
++
++        micoche.setColor("");
++        System.out.println(micoche.getColor());
++
++        System.out.println();
++        micoche.setAncho(500);
++        System.out.println(new StringBuilder().append("micoche tiene de ancho ").append(micoche.getAncho()).append(" cms.").toString());
++
++        System.out.println();
++        micoche.setLargo(1500);
++        System.out.println("mi coche tiene: " + micoche.getLargo() + " cm de largo");
++
++        System.out.println();
++        micoche.setAsisntos_cuero("Nel");
++        System.out.println("El coche tiene asistos de cuero?: " + micoche.isAsisntos_cuero());
++
++    }
++}
++
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1593112559057)
++++ .idea/vcs.xml	(date 1593112559057)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
